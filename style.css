@@ -1,4 +1,3 @@
-Below is the css make it as the source
 /* Reset & Base Styles */
 * {
   margin: 0;
@@ -189,7 +188,6 @@ ul {
   transform: scale(1.05);
 }
 
-
 /* Video Section */
 #video {
   padding: 3rem 1.5rem;
@@ -268,22 +266,4 @@ video {
   transition: background-color 0.3s ease;
 }
 
-.venue-card a:hover {
-  background-color: #6a1b6a;
-}
-
-.map-container {
-  margin-top: 1.5rem;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-/* Footer */
-footer {
-  background-color: #4A154B;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  margin-top: 2rem;
-}
+.venue-card a:hove
