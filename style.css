@@ -1,0 +1,289 @@
+Below is the css make it as the source
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4A154B;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #FFD700;
+}
+
+/* Hero Section - Home */
+.home-section {
+  background: url('images/background.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.home-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 0;
+}
+
+.hero-content {
+  z-index: 1;
+  position: relative;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#countdown {
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* Events Section */
+#events {
+  padding: 3rem 1.5rem;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+#events h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #4A154B;
+}
+
+.event-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.event-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 280px;
+}
+
+.event-card h3 {
+  margin-bottom: 0.5rem;
+  color: #4A154B;
+}
+
+/* ====== Gallery Styles ====== */
+#gallery {
+  padding: 3rem 1.5rem;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+#gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #4A154B;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Standard image styles */
+.gallery-container > img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+  transition: transform 0.3s ease;
+}
+
+.gallery-container > img:hover {
+  transform: scale(1.05);
+}
+
+/* Custom row for images 7, 9, 8 */
+.custom-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  grid-column: 1 / -1; /* Span full width of main grid */
+}
+
+/* Image styles inside the custom row */
+.custom-row img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+  transition: transform 0.3s ease;
+}
+
+.custom-row img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Video Section */
+#video {
+  padding: 3rem 1.5rem;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+#video h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #4A154B;
+}
+
+video {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ====== Venue Section ====== */
+#location {
+  background-color: #fff0f5;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+#location h2 {
+  font-size: 2.5rem;
+  color: #4A154B;
+  margin-bottom: 1.5rem;
+}
+
+#location p {
+  font-size: 1.2rem;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.venue-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.venue-card:hover {
+  transform: scale(1.02);
+}
+
+.venue-card h3 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.venue-card address {
+  font-style: normal;
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.venue-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #4A154B;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.venue-card a:hover {
+  background-color: #6a1b6a;
+}
+
+.map-container {
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Footer */
+footer {
+  background-color: #4A154B;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
