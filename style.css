@@ -57,7 +57,7 @@ ul {
 
 /* Hero Section - Home */
 .home-section {
-  background: url('images/background.jpg') no-repeat center center;
+  background: url('background.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
