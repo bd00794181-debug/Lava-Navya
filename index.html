@@ -1,18 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lava & Navya Wedding</title>
+  <title>Anusha & Harsha Wedding</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="nav-logo">Lava & Navya</div>
-    <ul class="nav-links">
+    <div class="nav-top">
+      <div class="nav-logo">Lava & Navya</div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </div>
+    <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
       <li><a href="#events">Events</a></li>
       <li><a href="#gallery">Gallery</a></li>
@@ -21,7 +23,7 @@
     </ul>
   </nav>
 
-  <!-- Hero Section with background image -->
+  <!-- Hero Section -->
   <header class="hero home-section" id="home">
     <div class="hero-content">
       <h1>Lava & Navya</h1>
@@ -44,7 +46,7 @@
       </div>
       <div class="event-card">
         <h3>Feast</h3>
-        <p>Monday, 11th Aug 2025 ||11:00 Am onwards</p>
+        <p>Monday, 11th Aug 2025 || 11:00 AM onwards</p>
       </div>
     </div>
   </section>
@@ -53,31 +55,30 @@
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery-container">
-      <img src="gallery1.JPG" alt="Gallery 1.0" />
+      <img src="gallery1.JPG" alt="Gallery 1" />
       <img src="gallery2.jpg" alt="Gallery 2" />
       <img src="gallery3.jpg" alt="Gallery 3" />
       <img src="gallery4.jpg" alt="Gallery 4" />
       <img src="gallery5.jpg" alt="Gallery 5" />
       <img src="gallery6.jpg" alt="Gallery 6" />
-<div class="custom-row">
-      <img src="gallery7.jpg" alt="Gallery 7" />
-      <img src="gallery8.jpg" alt="Gallery 8" />
-      <img src="gallery9.jpg" alt="Gallery 9" />
- </div>
+      <div class="custom-row">
+        <img src="gallery7.jpg" alt="Gallery 7" />
+        <img src="gallery8.jpg" alt="Gallery 8" />
+        <img src="gallery9.jpg" alt="Gallery 9" />
+      </div>
     </div>
   </section>
 
-
   <!-- Video Section -->
   <section id="video">
-    <h2> Wedding Invitation </h2>
+    <h2>Wedding Invitation</h2>
     <video controls width="100%">
       <source src="prewedding.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </section>
 
-<!-- Venue -->
+  <!-- Location Section -->
   <section id="location">
     <h2>Venue</h2>
     <p>Join us for the celebration at our beautiful venue</p>
@@ -104,13 +105,20 @@
     </div>
   </section>
 
-
   <!-- Footer -->
   <footer>
-    <h4>Anusha & Harsha </h4>
-   <h5>Thank you for being part of our special day </h5>
-   <h6>August 11, 2025 devarapalli, Andhra Pradesh </h6>
+    <h4>Anusha & Harsha</h4>
+    <h5>Thank you for being part of our special day</h5>
+    <h6>August 11, 2025, Devarapalli, Andhra Pradesh</h6>
   </footer>
+
+  <!-- Script -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+  </script>
 
   <script src="script.js"></script>
 </body>
