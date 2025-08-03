@@ -40,6 +40,21 @@ ul {
   letter-spacing: 1px;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  order: -1;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  border-radius: 2px;
+}
+
 .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -54,9 +69,31 @@ ul {
   color: #FFD700;
 }
 
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: #4A154B;
+    padding: 1rem 0;
+    align-items: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
 /* Hero Section - Home */
 .home-section {
-  background: url('background.JPG') no-repeat center center;
+  background: url('background.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
@@ -75,7 +112,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* dark overlay */
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
 
@@ -135,7 +172,7 @@ ul {
   color: #4A154B;
 }
 
-/* ====== Gallery Styles ====== */
+/* Gallery Styles */
 #gallery {
   padding: 3rem 1.5rem;
   background-color: #f8f8f8;
@@ -156,7 +193,6 @@ ul {
   margin: auto;
 }
 
-/* Standard image styles */
 .gallery-container > img {
   width: 100%;
   border-radius: 8px;
@@ -168,15 +204,13 @@ ul {
   transform: scale(1.05);
 }
 
-/* Custom row for images 7, 9, 8 */
 .custom-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  grid-column: 1 / -1; /* Span full width of main grid */
+  grid-column: 1 / -1;
 }
 
-/* Image styles inside the custom row */
 .custom-row img {
   width: 100%;
   border-radius: 8px;
@@ -206,7 +240,7 @@ video {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* ====== Venue Section ====== */
+/* Venue Section */
 #location {
   background-color: #fff0f5;
   padding: 4rem 1.5rem;
@@ -266,4 +300,22 @@ video {
   transition: background-color 0.3s ease;
 }
 
-.venue-card a:hove
+.venue-card a:hover {
+  background-color: #6a1b6a;
+}
+
+.map-container {
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Footer */
+footer {
+  background-color: #4A154B;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
